@@ -30,7 +30,7 @@
                 <div class="skill-item">
                     <i class="fas fa-cloud-upload-alt"></i>
                     <h3>Despliegue</h3>
-                    <p>GitHub, GitLab, Hostinger</p>
+                    <p>GitHub, GitLab, Hosting,vps</p>
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-code"></i>
@@ -104,6 +104,7 @@
         <p>
             <i class="fas fa-envelope"></i> javierteheran19@gmail.com | 
             <i class="fas fa-phone"></i> (+57) 3135044556
+            | <i class="fab fa-whatsapp"></i> <a href="https://wa.me/573135044556" target="_blank">WhatsApp</a>
         </p>
     </footer>
 

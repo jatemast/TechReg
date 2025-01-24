@@ -1,9 +1,23 @@
-<?php include('../celularesphppuro/views/layout/header.php'); ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Aparatos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/celularesphppuro/assets/css/adddevice.css">
+   
+    
+</head>
+<body>
+<?php
+ 
 
+ ?>
 
 <div class="form-container">
     <h2><i class="fas fa-cogs icon"></i>Registrar Aparato</h2>
-    <form id="aparatoForm" action="procesar_registro.php" method="POST" enctype="multipart/form-data">
+    <form id="aparatoform" action="<?= '/celularesphppuro/controllers/ProductoController.php' ?>" method="POST" enctype="multipart/form-data">
         
         <!-- Nombre del aparato -->
         <div class="input-icon">
@@ -16,10 +30,13 @@
         <div class="input-icon">
             <label for="categoria_id">Categoría</label>
             <select id="categoria_id" name="categoria_id">
-                <option value="1">Televisores</option>
-                <option value="2">Laptops</option>
-                <option value="3">Smartphones</option>
-                <option value="4">Electrodomésticos</option>
+            <?php
+           
+            $query = $pdo->query("SELECT id, nombre FROM categorias");
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+                echo "<option value='{$row['id']}'>{$row['nombre']}</option>";
+            }
+            ?>
             </select>
             <i class="fas fa-list-alt"></i>
         </div>
