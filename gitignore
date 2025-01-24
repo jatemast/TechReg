@@ -1,0 +1,43 @@
+
+# Ignorar el archivo .env
+.env
+
+# Ignorar directorios y archivos generados por Composer
+/vendor/
+/composer.lock
+
+# Ignorar el directorio de dependencias de Node.js si usas Node
+/node_modules/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de cache
+*.cache
+
+# Ignorar archivos temporales de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos temporales de editores de texto
+*.swp
+*.swo
+*.bak
+
+# Ignorar archivos de configuración de IDEs
+.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos de pruebas automáticas
+coverage/
+
+# Ignorar archivos de configuración de PHPUnit (si usas pruebas)
+phpunit.xml
+phpunit.xml.dist
+
+# Ignorar archivos de configuración de JetBrains PhpStorm
+/.idea/
+
+# Otros archivos o directorios específicos de tu proyecto pueden ser añadidos aquí.
