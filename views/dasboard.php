@@ -3,7 +3,12 @@
  <?php include('../views/layout/header.php'); ?>
  
 
-<?php include('../../celularesphppuro/views/layout/sidebar.php'); ?>
+ <?php include('../views/layout/sidebar.php'); ?>
+ <link rel="stylesheet" href="../assets/css/sidebar.css">
+
+
+
+
 <div class="main-wrapper">
         <div class="logo">
             <img src="../assets/images/logo.webp" alt="TechReg Logo">
@@ -16,6 +21,8 @@
      
     </div>
 </div>
+ 
+<script src="../assets/js/sider.js"></script>
  
 
 <?php include('../views/layout/footer.php'); ?>

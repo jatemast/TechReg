@@ -3,6 +3,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 2cm;
     background: linear-gradient(
         to right, 
         rgba(30, 36, 67, 0.8), 
@@ -10,30 +11,34 @@ header {
     );
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 15px 0;
+    display: flex;
+    align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 255, 0.1);
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo y menú se distribuyen a los extremos */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 0 20px;
 }
 
+.logo-title {
+    position: relative;
+    left: 0;
+}
+
 .logo-title h1 a {
-    color: var(--accent-color);
+    color: inherit;
     text-decoration: none;
     font-size: 28px;
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(0, 255, 179, 0.3);
-    transition: color 0.3s ease;
 }
 
-.logo-title h1 a:hover {
-    color: var(--primary-color);
+/* Alinea el menú a la derecha */
+header nav {
+    margin-left: auto; /* Empuja el menú hacia la derecha */
 }
 
 header nav ul {
@@ -57,39 +62,26 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
-header nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: var(--accent-color);
-    transition: width 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: var(--accent-color);
-}
-
-header nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* Responsive design */
+/* Estilo para pantallas pequeñas */
 @media screen and (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-        
+    /* Centrar el título */
+    .logo-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
+    /* Mostrar solo "Inicio" y ocultar los otros elementos */
     header nav ul {
-        flex-direction: column;
-        margin-top: 15px;
+        display: flex;
+        justify-content: center; /* Centra los elementos de la lista */
     }
 
     header nav ul li {
-        margin: 10px 0;
+        margin-left: 0; /* Elimina el margen entre los elementos del menú */
+    }
+
+    header nav ul li:not(:first-child) {
+        display: none; /* Ocultar todos los elementos excepto el primero (Inicio) */
     }
 }
