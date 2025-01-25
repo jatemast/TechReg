@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
    
-    <link rel="stylesheet" href='../assets/css/sidebar.css'>
+    <link rel="stylesheet" href="../../assets/css/sidebar.css">
       
 </head>
 <body>
@@ -18,7 +18,7 @@
 
         <div class="sidebar-content">
             <div class="logo-container">
-                <i class="fas fa-mobile-alt logo"></i>
+                <i class="fas fa-cog logo" style="font-size: 24px;"></i>
             </div>
 
             <ul class="nav-menu">
@@ -31,12 +31,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="../form/adddevice.php" class="nav-link">
                         <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H10.5V3.51a9.003 9.003 0 019.988 5.498z" />
                         </svg>
-                        <span class="nav-text">Agregar un equipo a reparar</span>
+                        <span class="nav-text">Agregar un equipo a reparar </span>
+
+
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 4v8m-6-8v8m12-8v8" />
+                            </svg>
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
                     </a>
                 </li>
             </ul>
@@ -44,7 +54,7 @@
     </div>
 
 
-    <script src="../assets/js/sider.js"></script>
+    <script src="../../assets/js/sider.js"></script>
 
  </body>
 </html>
